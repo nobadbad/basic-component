@@ -1,6 +1,10 @@
-# Getting Started with Create React App
+# About
+use storybook which is an open source tool for building UI components and pages in isolation.you can see some examples from it
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Live demo: http://storybook.xuance.top
+
+
+
 
 ## Available Scripts
 
