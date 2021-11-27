@@ -1,0 +1,139 @@
+$primary-color: #409eff !default;
+$info-color: #909399 !default;
+$success-color:#67c23a !default;
+$warning-color: #e6a23c !default;
+$danger-color: #f56c6c !default;
+@mixin tag-size($height,$line-height,$font-size,$padding:0 10px) {
+    height: $height;
+    line-height: $line-height;
+    padding: $padding;
+    font-size: $font-size;
+}
+@mixin tag-style(
+  $background,
+  $border,
+  $color
+) {
+  color: $color;
+  background: $background;
+  border-color: $border;
+}
+
+.my-tag{
+  display: inline-block;
+  height: 32px;
+  text-align: center;
+  min-width: 50px;
+  padding: 0 10px;
+  line-height: 30px;
+  font-size: 12px;
+  color: $primary-color;
+  border-color:#d9ecff;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 4px;
+  box-sizing: border-box;
+  white-space: nowrap;
+  .tag-icon-wrapper{
+    display: inline-block;
+    width: 10px;
+    position: relative;
+    right: -6px;
+    cursor: pointer;
+    .tag-icon-default{
+      display: inline-block;
+      margin-left: 2px;
+    }
+    .tag-icon-hover{
+      display: none
+    }
+    &:hover{
+      .tag-icon-default{
+        display: none
+      }
+      .tag-icon-hover{
+        display: inline-block
+      }
+    }
+  } 
+}
+
+.my-tag-lg{
+  @include tag-size(34px,32px,12px);
+}
+.my-tag-sm{
+    @include tag-size(28px,26px,12px);
+}
+.my-tag-md{
+    @include tag-size(32px,30px,12px);
+}
+
+.my-tag-primary{
+    @include tag-style(#ecf5ff,#d9ecff , $primary-color);
+    &.my-tag-dark{
+        @include tag-style($primary-color, $primary-color , #fff);
+        &:hover{
+          background: lighten($primary-color,8%);
+          border-color:lighten($primary-color,8%)   
+        }
+    }
+    &.my-tag-light{
+        @include tag-style(#fff, #b3d8ff , $primary-color);
+    }
+}
+.my-tag-info{
+    @include tag-style(#f4f4f5, #e9e9eb , $info-color);
+    &.my-tag-dark{
+        @include tag-style($info-color, $info-color , #fff);
+        &:hover{
+          background: lighten($info-color,8%);
+          border-color:lighten($info-color,8%)   
+        }
+    }
+    &.my-tag-light{
+        @include tag-style(#fff, #d3d4d6 , $info-color);
+    }
+}
+.my-tag-success{
+    @include tag-style(#f0f9eb, #e1f3d8, $success-color);
+    &.my-tag-dark{
+      @include tag-style($success-color, $success-color , #fff);
+      &:hover{
+        background: lighten($success-color,8%);
+        border-color:lighten($success-color,8%)   
+      }
+    }
+    &.my-tag-light{
+        @include tag-style(#fff, #c2e7b0 , $success-color);
+    }
+}
+.my-tag-warning{
+    @include tag-style(#fdf6ec, #faecd8 , $warning-color);
+    &.my-tag-dark{
+      @include tag-style($warning-color, $warning-color , #fff);
+      &:hover{
+        background: lighten($warning-color,8%);
+        border-color:lighten($warning-color,8%)   
+      }
+    }
+    &.my-tag-light{
+        @include tag-style(#fff, #f5dab1 , $warning-color);
+    }
+}
+.my-tag-danger{
+    @include tag-style(#fef0f0, #fde2e2 , $danger-color);
+    &.my-tag-dark{
+      @include tag-style($danger-color, $danger-color , #fff);
+      &:hover{
+        background: lighten($danger-color,8%);
+        border-color:lighten($danger-color,8%)   
+      }
+    }
+    &.my-tag-light{
+        @include tag-style(#fff, #fbc4c4 , $danger-color);
+    }
+}
+// $default-line-height:  30px!default;
+// $default-height:  32px!default;
+// $default-color:$primary-color!default;
+// $default-border:1px solid #d9ecff;

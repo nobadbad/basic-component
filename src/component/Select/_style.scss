@@ -1,0 +1,53 @@
+.viking-select {
+    position: relative;
+    .select-tags-wrapper{
+        position:absolute;
+        left: 2px;
+        padding: 0;
+        margin: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    & input[readonly] {
+        background-color: #fff;
+        border-color: #ced4da;
+        cursor: pointer;
+        opacity: 1;
+    }
+    & .viking-input-wrapper {
+        cursor: pointer;
+    }
+    .viking-select-dropdown{
+        list-style: none;
+        padding-left: 0;
+        white-space: nowrap;
+        position: absolute;
+        background: #fff;
+        z-index: 100;
+        top: calc(100% + 8px);
+        left: 0;
+        border: 1px solid #dee2e6;
+        box-shadow: 0 2px 4px 0 rgb(194,194,194), 0 0 6px 0 rgb(194,194,194);
+        width: 100%;
+        .select-item{
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            transition: color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+            color: #212529;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            &.is-selected {
+                color: #0d6efd;
+                font-weight: 700;
+            }
+            &.is-disabled {
+                color: #c0c4cc;
+                cursor: not-allowed;
+            }
+            &:hover {
+                background-color: rgba(13, 110, 253, 0.1);
+            }
+        }
+    }
+}
