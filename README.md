@@ -1,7 +1,7 @@
 # About
 use storybook which is an open source tool for building UI components and pages in isolation.you can see some examples from it
 
-Live demo: http://storybook.xuance.top
+Live demo: https://storybook.xuance.top
 
 
 
